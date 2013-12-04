@@ -10,3 +10,7 @@ message='Kaboom !!!'
 smsCount=200
 hiroshima.sendFlashSMS(phoneNumber,message,smsCount)
 ````
+#Gemfile
+````
+gem "smsBomber", "~> 0.0.1"
+````
