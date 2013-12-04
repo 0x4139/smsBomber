@@ -8,6 +8,9 @@ hiroshima = SmsBomber.new('/dev/cu.wwan')
 phoneNumber='+40742123123'
 message='Kaboom !!!'
 smsCount=200
+#for SMS
+hiroshima.sendSMS(phoneNumber,message,smsCount)
+#for Class 0 SMS
 hiroshima.sendFlashSMS(phoneNumber,message,smsCount)
 ````
 #Gemfile
