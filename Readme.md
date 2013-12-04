@@ -1,4 +1,4 @@
-#smsBomber
+#smsBomber - [![Gem Version](https://badge.fury.io/rb/smsBomber.png)](http://badge.fury.io/rb/smsBomber)
 smsBomber is a simple gem that helps you connect to a modem and send smsFlash
 
 #Example
